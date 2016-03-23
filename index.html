@@ -7,12 +7,13 @@
     <script src="data.js"></script>
     <script src="app.js"></script>
   </head>
-  <body class="container">
+  <body class="container" data-ng-app="inventory">
     <header class="jumbotron">
       <h1>Inventory Tracker</h1>
     </header>
 
-    <main>
+    <main data-ng-controller="inventory_controller as vm">
+      <h2>{{vm.hello}}</h2>
       <h2>Total Value: $0.00</h2>
       <input type="text" class="form-control" placeholder="Filter on..." />
       <table class="table table-striped">
