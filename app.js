@@ -8,6 +8,10 @@
   function InventoryController(){
     var vm = this;
     vm.data = data;
+    vm.sort_data_by = function(name){
+      vm.sort_on = name;
+      vm.is_descending = !(vm.is_descending);
+    }
     vm.total_value = function(){
       var total = 0;
       vm.data.forEach(function(product){

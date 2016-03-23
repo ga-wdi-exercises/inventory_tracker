@@ -22,10 +22,10 @@
               <span data-ng-if="vm.is_descending">z-a</span>
               <span data-ng-if="!vm.is_descending">a-z</span>
             </td>
-            <th data-ng-click="vm.sort_on = 'name'">Name</th>
-            <th data-ng-click="vm.sort_on = 'cost'">Cost</th>
-            <th data-ng-click="vm.sort_on = 'quantity'">Quantity</th>
-            <th data-ng-click="vm.sort_on = 'country'">Country of Origin</th>
+            <th data-ng-click="vm.sort_data_by('name')">Name</th>
+            <th data-ng-click="vm.sort_data_by('cost')">Cost</th>
+            <th data-ng-click="vm.sort_data_by('quantity')">Quantity</th>
+            <th data-ng-click="vm.sort_data_by('country')">Country of Origin</th>
             <th>Notes</th>
           </tr>
         </thead>
