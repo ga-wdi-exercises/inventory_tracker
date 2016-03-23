@@ -19,15 +19,15 @@
         <thead>
           <tr>
             <td>a-z</td>
-            <th>Name</th>
-            <th>Cost</th>
-            <th>Quantity</th>
-            <th>Country of Origin</th>
+            <th data-ng-click="vm.sort_on = 'name'">Name</th>
+            <th data-ng-click="vm.sort_on = 'cost'">Cost</th>
+            <th data-ng-click="vm.sort_on = 'quantity'">Quantity</th>
+            <th data-ng-click="vm.sort_on = 'country'">Country of Origin</th>
             <th>Notes</th>
           </tr>
         </thead>
         <tbody>
-          <tr data-ng-repeat="product in vm.data | filter: vm.filter_on">
+          <tr data-ng-repeat="product in vm.data | filter: vm.filter_on | orderBy: vm.sort_on">
             <td>{{$index + 1}}</td>
             <td>
               <img data-ng-src="{{product.image_url}}" alt="#" />
