@@ -14,7 +14,7 @@
 
     <main data-ng-controller="inventory_controller as vm">
       <h2>Total Value: $0.00</h2>
-      <input type="text" class="form-control" placeholder="Filter on..." />
+      <input type="text" class="form-control" placeholder="Filter on..." data-ng-model="vm.filter_on" />
       <table class="table table-striped">
         <thead>
           <tr>
@@ -27,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr data-ng-repeat="product in vm.data">
+          <tr data-ng-repeat="product in vm.data | filter: vm.filter_on">
             <td>{{$index + 1}}</td>
             <td>
               <img data-ng-src="{{product.image_url}}" alt="#" />
@@ -39,7 +39,7 @@
             </td>
             <td>{{product.country}}</td>
             <td>
-              <input type="text" />
+              <input type="text" data-ng-model="product.notes" />
             </td>
           </tr>
         </tbody>
