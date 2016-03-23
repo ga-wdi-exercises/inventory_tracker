@@ -8,5 +8,14 @@
   function InventoryController(){
     var vm = this;
     vm.data = data;
+    vm.total_value = function(){
+      var total = 0;
+      vm.data.forEach(function(product){
+        if(product.quantity){
+          total += (product.quantity * product.cost);
+        }
+      });
+      return total.toFixed(2);
+    }
   }
 })();
