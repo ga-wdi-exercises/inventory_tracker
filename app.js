@@ -7,6 +7,6 @@
 
   function InventoryController(){
     var vm = this;
-    vm.hello = "Hello, world!";
+    vm.data = data;
   }
 })();

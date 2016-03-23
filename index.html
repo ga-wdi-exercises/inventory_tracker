@@ -13,7 +13,6 @@
     </header>
 
     <main data-ng-controller="inventory_controller as vm">
-      <h2>{{vm.hello}}</h2>
       <h2>Total Value: $0.00</h2>
       <input type="text" class="form-control" placeholder="Filter on..." />
       <table class="table table-striped">
@@ -28,17 +27,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr data-ng-repeat="product in vm.data">
             <td>.</td>
             <td>
-              <img src="#" alt="#" />
-              <a href="" tabindex="-1"></a>
+              <img data-ng-src="{{product.image_url}}" alt="#" />
+              <a data-ng-href="{{product.url}}" tabindex="-1">{{product.name}}</a>
             </td>
-            <td>$0.00</td>
+            <td>${{product.cost}}</td>
             <td>
               <input type="number" />
             </td>
-            <td></td>
+            <td>{{product.country}}</td>
             <td>
               <input type="text" />
             </td>
