@@ -21,5 +21,8 @@
       });
       return total.toFixed(2);
     }
+    vm.destroy = function(product_index){
+      vm.data.splice(product_index, 1);
+    }
   }
 })();
