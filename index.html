@@ -47,6 +47,24 @@
             </td>
             <td data-ng-click="vm.destroy($index)">&cross;</td>
           </tr>
+          <tr>
+            <td colspan="2">
+              <input type="text" data-ng-model="vm.new_product.name" placeholder="Name" />
+            </td>
+            <td>
+              <input type="number" data-ng-model="vm.new_product.cost" placeholder="Cost" />
+            </td>
+            <td>
+              <input type="number" data-ng-model="vm.new_product.quantity" placeholder="0" />
+            </td>
+            <td>
+              <input type="text" data-ng-model="vm.new_product.country" placeholder="Country" />
+            </td>
+            <td>
+              <input type="text" data-ng-model="vm.new_product.image_url" placeholder="Image URL" />
+            </td>
+            <td data-ng-click="vm.create()">&plus;</td>
+          </tr>
         </tbody>
       </table>
     </main>
