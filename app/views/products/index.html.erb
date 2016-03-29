@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Product List</title>
-    <link rel="stylesheet" href="bootstrap.css" />
-    <script src="angular.js"></script>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
-  </head>
-  <body class="container" data-ng-app="inventory">
+<%= stylesheet_link_tag "products", property: "stylesheet" %>
+<%= javascript_include_tag "products" %>
+  <div class="container" data-ng-app="inventory">
     <header class="jumbotron">
       <h1>Inventory Tracker</h1>
     </header>
@@ -68,5 +61,4 @@
         </tbody>
       </table>
     </main>
-  </body>
-</html>
+  </div>
