@@ -5,12 +5,15 @@
 
 (function(){
   angular
-  .module("inventory", [])
-  .controller("inventory_controller", InventoryController);
+  .module("inventory", ["ngResource"])
+  .controller("inventory_controller", ["$resource", InventoryController]);
 
-  function InventoryController(){
+  function InventoryController($resource){
     var vm = this;
-    vm.data = data;
+    var Product = $resource("/products/:id.json", {}, {
+      update: {method: "PUT"}
+    });
+    vm.data = Product.query();
     vm.sort_data_by = function(name){
       vm.sort_on = name;
       vm.is_descending = !(vm.is_descending);
