@@ -45,5 +45,10 @@
         vm.new_product = {};
       });
     }
+    vm.update = function(product){
+      Product.update({id: product.id}, product, function(response){
+        console.log("Product updated!");
+      });
+    }
   }
 })();

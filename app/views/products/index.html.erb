@@ -32,11 +32,11 @@
             </td>
             <td>${{product.cost.toFixed(2)}}</td>
             <td>
-              <input type="number" data-ng-model="product.quantity" />
+              <input type="number" data-ng-model="product.quantity" data-ng-change="vm.update(product)" />
             </td>
             <td>{{product.country}}</td>
             <td>
-              <input type="text" data-ng-model="product.notes" />
+              <input type="text" data-ng-model="product.notes" data-ng-change="vm.update(product)" />
             </td>
             <td data-ng-click="vm.destroy($index)">&cross;</td>
           </tr>

@@ -17,6 +17,12 @@ class ProductsController < ApplicationController
     render json: @product, status: :ok
   end
 
+  def update
+    @product = Product.find(params[:id])
+    @product.update!(product_params)
+    render json: @product, status: :ok
+  end
+
   private
   def product_params
     params.require(:product).permit(:name, :image_url, :cost, :url, :quantity, :country, :notes)
