@@ -39,8 +39,11 @@
     }
     vm.new_product = {};
     vm.create = function(){
-      vm.data.push(angular.copy(vm.new_product));
-      vm.new_product = {};
+      Product.save(vm.new_product, function(response){
+        response.cost = parseFloat(response.cost);
+        vm.data.push(response);
+        vm.new_product = {};
+      });
     }
   }
 })();
