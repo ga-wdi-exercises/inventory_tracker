@@ -7,4 +7,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    Product.destroy(params[:id])
+    render json: {success: true}, status: :ok
+  end
+
 end

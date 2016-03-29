@@ -32,7 +32,10 @@
       return total.toFixed(2);
     }
     vm.destroy = function(product_index){
-      vm.data.splice(product_index, 1);
+      var product = vm.data[product_index];
+      Product.remove({id: product.id}, function(response){
+        if(response.success) vm.data.splice(product_index, 1);
+      });
     }
     vm.new_product = {};
     vm.create = function(){
