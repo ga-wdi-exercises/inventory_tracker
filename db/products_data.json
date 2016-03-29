@@ -1,4 +1,4 @@
-var data = [{"image_url":"http://dummyimage.com/25x25.png/cc0000/ffffff","cost":16.64,"name":"Skinix","url":"http://live.com/justo/morbi.jpg","country":"China"},
+[{"image_url":"http://dummyimage.com/25x25.png/cc0000/ffffff","cost":16.64,"name":"Skinix","url":"http://live.com/justo/morbi.jpg","country":"China"},
 {"image_url":"http://dummyimage.com/25x25.png/ff4444/ffffff","cost":9.57,"name":"Thoughtsphere","url":"https://google.de/mi/pede.jsp","country":"Colombia"},
 {"image_url":"http://dummyimage.com/25x25.png/5fa2dd/ffffff","cost":9.67,"name":"Babbleblab","url":"https://people.com.cn/augue/quam/sollicitudin.aspx","country":"Comoros"},
 {"image_url":"http://dummyimage.com/25x25.png/ff4444/ffffff","cost":11.00,"name":"LiveZ","url":"http://printfriendly.com/morbi/sem/mauris/laoreet/ut/rhoncus/aliquet.jsp","country":"China"},
